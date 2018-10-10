@@ -13,11 +13,11 @@ SRCREV = "${AUTOREV}"
 
 S = "${WORKDIR}/git"
 
-EXTRA_OEMAKE = "'SRC=${S}' 'KSRC=${STAGING_KERNEL_DIR}'"
+EXTRA_OEMAKE = "'SRC=${S}' 'KSRC=${STAGING_KERNEL_DIR}' HAS_HOSTAPD_SUPPORT=y"
 
 KERNEL_MODULE_AUTOLOAD += "mt7612u"
 
-# now add:
+# add:
 # IMAGE_INSTALL += " mt7612u "
 # to your image recipe
 
